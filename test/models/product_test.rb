@@ -39,4 +39,5 @@ class ProductTest < ActiveSupport::TestCase
     bad.each do |image_url|
       assert new_product(image_url).invalid?, "#image shouldn't be valid"
     end
+  end
 end
