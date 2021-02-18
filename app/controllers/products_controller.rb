@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: %i[ show edit update destroy ]
+  before_action :set_product, only: [:show, :edit, :update, :destroy ]
 
   # GET /products or /products.json
   def index
@@ -63,7 +63,9 @@ class ProductsController < ApplicationController
     @latest_order = @product.orders.order(:updated_at).last
     if stale?(@latest_order)
       respond_to do |format|
+        format.html
         format.atom
+        format.json { render json: @product.to_json(include: :orders) }
       end
     end
   end
