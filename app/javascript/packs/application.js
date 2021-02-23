@@ -17,3 +17,6 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 window.I18n = require("../../../public/javascripts/i18n")
 require("../../../public/javascripts/translations")
+
+require("trix")
+require("@rails/actiontext")
