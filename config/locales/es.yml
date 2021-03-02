@@ -62,5 +62,8 @@ es:
         expiration_date: "Expiración"
       purchase_order_pay_type:
         po_number: "Número"
+      cash_pay_type:
+        cash_amount: "Monto en efectivo"
+        change: "Cambio"
 
   thanks:          "Gracias por su pedido"

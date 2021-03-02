@@ -4,6 +4,7 @@ import NoPayType from './NoPayType';
 import CreditCardPayType from './CreditCardPayType';
 import CheckPayType from './CheckPayType';
 import PurchaseOrderPayType from './PurchaseOrderPayType';
+import CashPayType from './CashPayType';
 
 class PayTypeSelector extends React.Component {
   constructor(props) {
@@ -24,6 +25,8 @@ class PayTypeSelector extends React.Component {
       PayTypeCustomComponent = CheckPayType;
     } else if (this.state.selectedPayType == "Purchase order") {
       PayTypeCustomComponent = PurchaseOrderPayType;
+    } else if (this.state.selectedPayType == "Cash") {
+      PayTypeCustomComponent = CashPayType;
     }
     return (
       <div>
@@ -34,6 +37,7 @@ class PayTypeSelector extends React.Component {
           <option value="Check">{I18n.t("orders.form.pay_types.check")}</option>
           <option value="Credit card">{I18n.t("orders.form.pay_types.credit_card")}</option>
           <option value="Purchase order">{I18n.t("orders.form.pay_types.purchase_order")}</option>
+          <option value="Cash">{I18n.t("orders.form.pay_types.cash")}</option>
         </select>
       </div>
       <PayTypeCustomComponent />
