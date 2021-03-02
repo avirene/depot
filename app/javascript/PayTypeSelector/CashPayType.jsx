@@ -6,7 +6,7 @@ class CashPayType extends React.Component {
       <div>
         <div className="field">
           <label htmlFor="order_cash_amount">{I18n.t("orders.form.cash_pay_type.cash_amount")}</label>
-          <input type="password"
+          <input type="text"
                  name="order[cash_amount]" 
                  id="order_cash_amount" />
         </div>

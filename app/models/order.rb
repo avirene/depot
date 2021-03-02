@@ -38,6 +38,10 @@ class Order < ApplicationRecord
     when "Purchase order"
       payment_method = :po
       payment_details[:po_num] = pay_type_params[:po_number]
+    when "Cash"
+      payment_method = :cash
+      payment_details[:cash_amount] = pay_type_params[:cash_amount]
+      payment_details[:change] = pay_type_params[:change]
     end
 
     payment_result = Pago.make_payment(
