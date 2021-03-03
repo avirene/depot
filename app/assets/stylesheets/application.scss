@@ -14,9 +14,9 @@
  *= require_self
  */
 
- @import "bootstrap";
+@import "bootstrap";
 
- body {
+body {
   margin: 0;
   padding: 0;
 }
@@ -157,18 +157,18 @@ nav.logged_in_nav {
   label {
     padding: 0.5em 0;
   }
-  input[type="submit"] {
-    background-color: #bfb;
-    border-radius: 0.354em;
-    border: solid thin #888;
-    color: black;
-    font-size: 1.41em;
-    font-weight: bold;
-    padding: 0.354em 1em;
-  }
-  input[type="submit"]:hover {
-    background-color: #9d9;
-  }
+  // input[type="submit"] {
+  //   background-color: #bfb;
+  //   border-radius: 0.354em;
+  //   border: solid thin #888;
+  //   color: black;
+  //   font-size: 1.41em;
+  //   font-weight: bold;
+  //   padding: 0.354em 1em;
+  // }
+  // input[type="submit"]:hover {
+  //   background-color: #9d9;
+  // }
   // Also, clean up the error styling
   #error_explanation {
     background-color: white;

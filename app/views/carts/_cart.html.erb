@@ -16,8 +16,8 @@
 </table>
 
 <div class="actions">
-<%= button_to t('.empty'), cart, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= button_to t('.empty'), cart, method: :delete, class: "btn btn-warning", data: { confirm: 'Are you sure?' } %>
 
-<%= button_to t('.checkout'), new_order_path, method: :get, class: "checkout" %>
+<%= button_to t('.checkout'), new_order_path, method: :get, class: "checkout", class: "btn btn-success" %>
 </div>
 </article>
