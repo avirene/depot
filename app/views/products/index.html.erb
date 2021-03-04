@@ -2,13 +2,20 @@
   <aside id="notice"><%= notice %></aside>
 <% end %>
 
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="#">Home</a></li>
+  <li class="breadcrumb-item active" aria-current="page">Products</li>
+</ol>
+</nav>
+
 <h1>Products</h1>
 
 <table>
   <tfoot>
     <tr>
       <td colspan="3">
-        <%= link_to 'New Product', new_product_path %>
+        <%= link_to 'New Product', new_product_path, class: "link-success" %>
       </td>
     </tr>
   </tfoot>
@@ -29,9 +36,9 @@
 
         <td class="actions">
           <ul>
-            <li><%= link_to 'Show', product %></li>
-            <li><%= link_to 'Edit', edit_product_path(product) %></li>
-            <li><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+            <li><%= link_to 'Show', product, class: "link-info" %></li>
+            <li><%= link_to 'Edit', edit_product_path(product), class: "link-warning" %></li>
+            <li><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "link-danger" %></li>
           </ul>
         </td>
       </tr>
