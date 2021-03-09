@@ -2,7 +2,7 @@ class LineItemsController < ApplicationController
   skip_before_action :authorize, only: [:create]
 
   include CurrentCart
-  before_action :set_cart, only: [:create]
+  before_action :set_cart, only: [:create, :destroy]
   before_action :set_line_item, only: [:show, :edit, :update, :destroy]
 
   # GET /line_items or /line_items.json
@@ -57,6 +57,7 @@ class LineItemsController < ApplicationController
   def destroy
     product = Product.find(params[:product_id])
     @line_item = @cart.delete_product(product)
+    
     respond_to do |format|
       if @line_item.destroy
         format.html { redirect_to store_index_url }
