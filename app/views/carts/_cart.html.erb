@@ -3,6 +3,7 @@
   <aside id="notice"><%= notice %></aside>
 <% end %>
 
+<% unless cart.line_items.empty? %>
 <h2><%= t('.title') %></h2>
 <table class="table-primary">
 
@@ -21,3 +22,4 @@
 <%= button_to t('.checkout'), new_order_path, method: :get, class: "checkout", class: "btn btn-success" %>
 </div>
 </article>
+<% end %>
